@@ -22,7 +22,7 @@
     <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="{% static 'css/creative.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/creative.css' %}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,14 +42,14 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="/">One2CPU</a>
+                <a class="navbar-brand page-scroll" href="#page-top">One2CPU</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="adddat">Add DATA</a>
+
                     </li>
 
                 </ul>
@@ -60,20 +60,14 @@
     </nav>
 
     <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 id="homeHeading">CPU Prices Analysis</h1>
-                <hr>
-                <p>Let's Analyze Now!</p>
-                <a href="getprice" class="btn btn-primary btn-xl page-scroll">GET PRICES</a>
-            </div>
-        </div>
+<div class="header-content">
+                <h1>Add CPU data for analyze</h1>
+                <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+</div>
     </header>
-
-
-
-
-
     <!-- jQuery -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
 
